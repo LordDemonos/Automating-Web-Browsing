@@ -1,0 +1,24 @@
+The provided program uses Puppeteer, a Node.js library for automating web browsers, to surf websites from a text file using the web browser specified by the user. It follows the logic to open new tabs until the maximum number of open tabs is reached, then closes tabs starting from the left while opening new tabs on the right.
+
+Here's a step-by-step explanation of the program:
+
+It defines constants for browserName (path to the browser executable), filePath (path to the text file with the list of websites), maxTabs (maximum number of tabs to open at once), maxOpenTabs (maximum number of tabs to keep open at any time), and waitTime (time to wait in seconds before accessing a new website).
+
+The required libraries and helper functions are defined: puppeteer, readWebsitesFromFile, addProtocolIfMissing, and sleep.
+
+The startSurfing function is defined. This function launches the web browser, reads the list of websites from the file, and starts navigating to each website.
+
+The readWebsitesFromFile function reads the content of the specified file and returns the list of websites.
+
+The addProtocolIfMissing function adds the protocol (http:// or https://) to a URL if it's missing.
+
+The sleep function is a helper function that waits for the specified time (in milliseconds).
+
+The startSurfing function uses Puppeteer to launch the browser, iterates through the list of websites, opens new tabs, closes the oldest tabs when the maximum number of open tabs is reached, and waits for the specified time before opening a new tab.
+
+The function startSurfing is called at the end of the script with the user-provided configurations to start the surfing process.
+
+
+
+
+
